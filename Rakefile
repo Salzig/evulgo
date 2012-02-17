@@ -4,4 +4,15 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+desc "project setup, places config.samples to right place"
+task :setup do
+  FILES = {
+    'config/database.yml.sample' => 'config/database.yml'
+  }.each do |(source, target)|
+    cp source, target unless File.exists? target
+  end
+  
+  Rake::Task['db:setup'].invoke
+end
+
 Evulgo::Application.load_tasks
