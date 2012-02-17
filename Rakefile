@@ -9,7 +9,11 @@ task :setup do
   FILES = {
     'config/database.yml.sample' => 'config/database.yml'
   }.each do |(source, target)|
-    cp source, target unless File.exists? target
+    unless File.exists? target
+      cp source, target
+    else
+      puts "skipping #{target}..."
+    end
   end
   
   Rake::Task['db:setup'].invoke
