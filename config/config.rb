@@ -4,7 +4,7 @@ def project
     path: "/home/evulgo/www",
     user: "evulgo",
     group: 'staff',
-    git: "git@codeplane.com:you/my_site.git",
+    git: "git@github.com:Salzig/evulgo.git",
     server: "88.198.106.201"
   }
 end
