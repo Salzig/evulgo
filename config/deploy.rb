@@ -2,7 +2,7 @@ require "bundler/capistrano"
 require File.expand_path(File.dirname(__FILE__) +'/config.rb')
 
 set :scm,             :git
-set :repository,      project.git
+set :repository,      project[:git]
 set :branch,          "origin/master"
 set :migrate_target,  :current
 set :ssh_options,     { :forward_agent => true }
@@ -29,9 +29,6 @@ set(:previous_revision) { capture("cd #{current_path}; git rev-parse --short HEA
 default_environment["RAILS_ENV"] = 'production'
 
 # Use our ruby-1.9.2-p290@my_site gemset
-default_environment["PATH"]         = "--"
-default_environment["GEM_HOME"]     = "--"
-default_environment["GEM_PATH"]     = "--"
 default_environment["RUBY_VERSION"] = "ruby-1.9.3-p0"
 
 default_run_options[:shell] = 'bash'
