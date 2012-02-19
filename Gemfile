@@ -33,6 +33,8 @@ group :development do
   gem 'capistrano'
 end
 
+# Rapid Application Development
+gem 'inherited_resources'
 
-gem 'inherited_resources'# We love JavaScript
+# We love JavaScript
 gem 'jquery-rails'
