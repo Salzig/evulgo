@@ -33,8 +33,6 @@ default_environment["RAILS_ENV"] = 'production'
 # Use our ruby-1.9.2-p290@my_site gemset
 default_environment["RUBY_VERSION"] = "ruby-1.9.3-p0"
 
-default_run_options[:shell] = 'bash'
-
 namespace :deploy do
   desc "Deploy your application"
   task :default do
