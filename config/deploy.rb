@@ -1,6 +1,7 @@
+require File.expand_path(File.dirname(__FILE__) +'/config.rb')
 require "bundler/capistrano"
 require "rvm/capistrano"
-require File.expand_path(File.dirname(__FILE__) +'/config.rb')
+require './config/boot'
 
 set :scm,             :git
 set :repository,      project[:git]
