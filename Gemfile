@@ -28,10 +28,9 @@ end
 # Use unicorn as the web server
 gem 'unicorn'
 
-group :development do
-  # Deploy with Capistrano
-  gem 'capistrano'
-end
+# Deploy with Capistrano
+gem 'capistrano'
+gem 'rvm'
 
 # Rapid Application Development
 gem 'inherited_resources'

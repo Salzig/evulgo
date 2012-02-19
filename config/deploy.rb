@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+require "rvm/capistrano"
 require File.expand_path(File.dirname(__FILE__) +'/config.rb')
 
 set :scm,             :git
