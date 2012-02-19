@@ -26,7 +26,7 @@ if env == "production"
   working_directory "#{project[:path]}/current"
 
   # feel free to point this anywhere accessible on the filesystem
-  user project_user, project_group
+  user project[:user], project[:group]
   shared_path = "#{project[:path]}/shared"
 
   stderr_path "#{shared_path}/log/unicorn.stderr.log"
