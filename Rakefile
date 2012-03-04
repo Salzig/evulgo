@@ -8,7 +8,8 @@ desc "project setup, places config.samples to right place"
 task :setup do
   FILES = {
     'config/database.yml.sample' => 'config/database.yml',
-    '.rspec.sample' => '.rspec'
+    '.rspec.sample' => '.rspec',
+    'Guardfile.sample' => 'Guardfile'
   }.each do |(source, target)|
     unless File.exists? target
       cp source, target
