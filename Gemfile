@@ -37,3 +37,8 @@ gem 'inherited_resources'
 
 # We love JavaScript
 gem 'jquery-rails'
+
+
+group :development, :test do
+  gem 'rspec'
+end
