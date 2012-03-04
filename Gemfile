@@ -34,6 +34,7 @@ gem 'rvm', require: false
 
 # Rapid Application Development
 gem 'inherited_resources'
+gem 'simple_form'
 
 # We love JavaScript
 gem 'jquery-rails'
