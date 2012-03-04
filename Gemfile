@@ -29,8 +29,8 @@ end
 gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'capistrano'
-gem 'rvm'
+gem 'capistrano', require: false
+gem 'rvm', require: false
 
 # Rapid Application Development
 gem 'inherited_resources'
