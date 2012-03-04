@@ -16,3 +16,4 @@
 
 # Configurations
 config/database.yml
+.rspec
