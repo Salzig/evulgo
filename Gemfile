@@ -28,6 +28,9 @@ gem 'rvm', require: false
 gem 'inherited_resources'
 gem 'simple_form'
 
+# Authorization
+gem "cancan"
+
 # We love JavaScript
 gem 'jquery-rails'
 
