@@ -135,6 +135,10 @@ GEM
     simple_form (1.5.2)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
+    spork (1.0.0rc2)
+    spork-rails (3.2.0)
+      rails (>= 3.0.0, < 3.3.0)
+      spork (>= 1.0rc0)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -170,6 +174,7 @@ DEPENDENCIES
   rvm
   sass-rails (~> 3.2.3)
   simple_form
+  spork-rails
   sqlite3
   uglifier (>= 1.0.3)
   unicorn

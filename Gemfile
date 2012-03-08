@@ -41,6 +41,10 @@ gem 'jquery-rails'
 
 
 group :development, :test do
+  # faster testing
+  gem 'spork-rails'
+
+
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'guard-rspec', require: false
