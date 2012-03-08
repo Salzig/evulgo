@@ -1,10 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.2'
-
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
 gem 'sqlite3'
 
 # Gems used only for assets and not required
@@ -12,10 +8,6 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
-
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -39,14 +31,15 @@ gem 'simple_form'
 # We love JavaScript
 gem 'jquery-rails'
 
-
 group :development, :test do
   # faster testing
   gem 'spork-rails'
 
-
+  # Testing
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'guard-rspec', require: false
+  gem 'guard-spork', require: false
   gem 'growl', require: false
 end
