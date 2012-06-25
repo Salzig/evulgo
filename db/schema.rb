@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120625205623) do
+ActiveRecord::Schema.define(:version => 20120625221734) do
 
   create_table "timelines", :force => true do |t|
     t.integer  "article_id"
@@ -21,5 +21,11 @@ ActiveRecord::Schema.define(:version => 20120625205623) do
   end
 
   add_index "timelines", ["article_id"], :name => "index_timelines_on_article_id"
+
+  create_table "tweets", :force => true do |t|
+    t.text     "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end
