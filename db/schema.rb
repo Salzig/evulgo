@@ -11,16 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120625221734) do
+ActiveRecord::Schema.define(:version => 20120625222348) do
 
   create_table "timelines", :force => true do |t|
-    t.integer  "article_id"
-    t.string   "article_type"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.integer  "action_id"
+    t.string   "action_type"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
-  add_index "timelines", ["article_id"], :name => "index_timelines_on_article_id"
+  add_index "timelines", ["action_id"], :name => "index_timelines_on_article_id"
 
   create_table "tweets", :force => true do |t|
     t.text     "message"

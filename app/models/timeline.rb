@@ -1,3 +1,3 @@
 class Timeline < ActiveRecord::Base
-  belongs_to :article, :polymorphic => true
+  belongs_to :action, :polymorphic => true
 end

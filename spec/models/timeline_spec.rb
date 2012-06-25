@@ -1,5 +1,5 @@
 require 'spec_helper'
 
 describe Timeline do
-  it { should belong_to :article }
+  it { should belong_to :action }
 end
