@@ -1,7 +1,7 @@
 require 'spork'
 
 Spork.prefork do
-  # Loading more in this block will cause your tests to run faster. However, 
+  # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
   # This file is copied to spec/ when you run 'rails generate rspec:install'
@@ -15,17 +15,6 @@ Spork.prefork do
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
   RSpec.configure do |config|
-    # ## Mock Framework
-    #
-    # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
-    #
-    # config.mock_with :mocha
-    # config.mock_with :flexmock
-    # config.mock_with :rr
-
-    # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-    config.fixture_path = "#{::Rails.root}/spec/fixtures"
-
     # If you're not using ActiveRecord, or you'd prefer not to run each of your
     # examples within a transaction, remove the following line or assign false
     # instead of true.
@@ -35,12 +24,18 @@ Spork.prefork do
     # automatically. This will be the default behavior in future versions of
     # rspec-rails.
     config.infer_base_class_for_anonymous_controllers = false
-  end  
+  end
 end
 
 Spork.each_run do
+  quietly do
+    # Setup Database
+    load "#{Rails.root.to_s}/db/schema.rb" # use db agnostic schema by default
+    load "#{Rails.root.to_s}/db/seeds.rb"
+    ActiveRecord::Migrator.up('db/migrate') # use migrations
+  end
   # This code will be run each time you run your specs.
-  
+
   # Make sure all necessary files get reloaded
   load "#{Rails.root}/config/routes.rb"
   Dir["#{Rails.root}/app/**/*.rb"].each {|f| load f}
@@ -48,8 +43,8 @@ Spork.each_run do
 end
 
 # --- Instructions ---
-# - Sort through your spec_helper file. Place as much environment loading 
-#   code that you don't normally modify during development in the 
+# - Sort through your spec_helper file. Place as much environment loading
+#   code that you don't normally modify during development in the
 #   Spork.prefork block.
 # - Place the rest under Spork.each_run block
 # - Any code that is left outside of the blocks will be ran during preforking
