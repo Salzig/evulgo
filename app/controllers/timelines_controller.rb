@@ -1,2 +1,3 @@
-class TimelinesController < ApplicationController
+class TimelinesController < BaseController
+  actions :index
 end
