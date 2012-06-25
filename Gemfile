@@ -14,9 +14,6 @@ end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
 # Use unicorn as the web server
 gem 'unicorn'
 
@@ -27,12 +24,16 @@ gem 'rvm', require: false
 # Rapid Application Development
 gem 'inherited_resources'
 gem 'simple_form'
+gem 'haml-rails'
 
 # Authorization
 gem "cancan"
 
 # We love JavaScript
 gem 'jquery-rails'
+
+# Use thin as web server
+gem 'thin'
 
 group :development, :test do
   # faster testing
