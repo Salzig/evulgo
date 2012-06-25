@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :timeline do
-    article nil
+    action { FactoryGirl.create(:tweet) }
   end
 end
