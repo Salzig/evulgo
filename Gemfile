@@ -45,4 +45,5 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'guard-spork', require: false
   gem 'growl', require: false
+  gem 'faker'
 end

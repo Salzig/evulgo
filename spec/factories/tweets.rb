@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :tweet do
-    message "MyText"
+    message { Faker::Lorem.sentence }
   end
 end
